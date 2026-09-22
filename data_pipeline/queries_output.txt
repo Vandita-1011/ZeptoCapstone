@@ -1,0 +1,122 @@
+=== Q1 SELECT/WHERE/ORDER BY/LIMIT - 5 priciest books over 30 GBP ===
+SELECT title, price_gbp FROM books WHERE price_gbp > 30 ORDER BY price_gbp DESC LIMIT 5
+
+                                                                 title  price_gbp
+                                         Boar Island (Anna Pigeon #19)      59.48
+The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)      57.70
+                                                              El Deafo      57.62
+                      Ajin: Demi-Human, Volume 1 (Ajin: Demi-Human #1)      57.06
+                                      A Year in Provence (Provence #1)      56.88
+
+=== Q2 DISTINCT - distinct ratings ===
+SELECT DISTINCT rating FROM books ORDER BY rating
+
+ rating
+      1
+      2
+      3
+      4
+      5
+
+=== Q3 IN - books rated 4 or 5 ===
+SELECT title, rating, price_gbp FROM books WHERE rating IN (4, 5) ORDER BY title
+
+                                                                            title  rating  price_gbp
+                                               1,000 Places to See Before You Die       5      26.08
+                                           A Time of Torment (Charlie Parker #14)       5      48.35
+                                                 A Year in Provence (Provence #1)       4      56.88
+                                 Ajin: Demi-Human, Volume 1 (Ajin: Demi-Human #1)       4      57.06
+                                         Batman: The Dark Knight Returns (Batman)       5      15.38
+                      Bleach, Vol. 1: Strawberry and the Soul Reapers (Bleach #1)       5      34.65
+                                                                    Camp Midnight       4      17.08
+                              Codename Baboushka, Volume 1: The Conclave of Death       4      36.72
+                                                             Danganronpa Volume 1       4      51.99
+                                 Delivering the Truth (Quaker Midwife Mystery #1)       4      20.89
+                                                                         El Deafo       5      57.62
+                                     Fables, Vol. 1: Legends in Exile (Fables #1)       4      41.62
+                                         Fruits Basket, Vol. 1 (Fruits Basket #1)       5      40.28
+                                         Fruits Basket, Vol. 2 (Fruits Basket #2)       5      11.64
+                                         Fruits Basket, Vol. 4 (Fruits Basket #4)       4      50.44
+                                         Fruits Basket, Vol. 6 (Fruits Basket #6)       4      20.96
+                                         Fruits Basket, Vol. 9 (Fruits Basket #9)       4      33.95
+                 Full Moon over Noah’s Ark: An Odyssey to Mount Ararat and Beyond       4      49.43
+                                             Giant Days, Vol. 1 (Giant Days #1-4)       4      56.76
+                        Ms. Marvel, Vol. 1: No Normal (Ms. Marvel (2014-2015) #1)       4      39.39
+                            Murder at the 42nd Street Library (Raymond Ambler #1)       4      54.36
+                           Outcast, Vol. 1: A Darkness Surrounds Him (Outcast #1)       4      15.44
+                                           Paper Girls, Vol. 1 (Paper Girls #1-5)       4      21.71
+Princess Jellyfish 2-in-1 Omnibus, Vol. 01 (Princess Jellyfish 2-in-1 Omnibus #1)       5      13.61
+        Rat Queens, Vol. 1: Sass & Sorcery (Rat Queens (Collected Editions) #1-5)       5      46.96
+                                                                      Roller Girl       5      14.10
+                                    Saga, Volume 3 (Saga (Collected Editions) #3)       5      21.57
+                          Scott Pilgrim's Precious Little Life (Scott Pilgrim #1)       5      52.29
+                                                                    Sharp Objects       4      47.82
+                               So Cute It Hurts!!, Vol. 6 (So Cute It Hurts!! #6)       4      35.43
+                    Superman Vol. 1: Before Truth (Superman by Gene Luen Yang #1)       5      11.89
+         The Bachelor Girl's Guide to Murder (Herringford and Watts Mysteries #1)       5      52.30
+                                                                The Girl You Lost       5      12.29
+                                  The Murder of Roger Ackroyd (Hercule Poirot #4)       4      44.10
+                              The Mysterious Affair at Styles (Hercule Poirot #1)       4      24.80
+                                         The Nameless City (The Nameless City #1)       4      38.16
+           The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)       4      57.70
+                                                              The Past Never Ends       4      56.50
+                    The Sandman, Vol. 3: Dream Country (The Sandman (volumes) #3)       5      55.55
+                                                The Silkworm (Cormoran Strike #2)       5      23.05
+                                                                  This One Summer       4      19.49
+                What Happened on Beale Street (Secrets of the South Mysteries #2)       5      25.37
+                 Wonder Woman: Earth One, Volume One (Wonder Woman: Earth One #1)       4      37.34
+                           Y: The Last Man, Vol. 1: Unmanned (Y: The Last Man #1)       4      18.51
+
+=== Q4 BETWEEN - books priced 10 to 20 GBP ===
+SELECT title, price_gbp FROM books WHERE price_gbp BETWEEN 10 AND 20 ORDER BY price_gbp
+
+                                                                            title  price_gbp
+                                                                         Patience      10.16
+                                                    The Complete Maus (Maus #1-2)      10.64
+                                             Tastes Like Fear (DI Marnie Rome #3)      10.69
+                            Adulthood Is a Myth: A "Sarah's Scribbles" Collection      10.90
+                                         Fruits Basket, Vol. 2 (Fruits Basket #2)      11.64
+                                    Saga, Volume 2 (Saga (Collected Editions) #2)      11.75
+                                                       Hide Away (Eve Duncan #20)      11.84
+                    Superman Vol. 1: Before Truth (Superman by Gene Luen Yang #1)      11.89
+                                                                The Girl You Lost      12.29
+Princess Jellyfish 2-in-1 Omnibus, Vol. 01 (Princess Jellyfish 2-in-1 Omnibus #1)      13.61
+                                                                Playing with Fire      13.71
+                                           That Darkness (Gardiner and Renner #1)      13.92
+                                                                      Roller Girl      14.10
+    The Wicked + The Divine, Vol. 3: Commercial Suicide (The Wicked + The Divine)      14.41
+                                         Batman: The Dark Knight Returns (Batman)      15.38
+                           Outcast, Vol. 1: A Darkness Surrounds Him (Outcast #1)      15.44
+                                        The Girl In The Ice (DCI Erika Foster #1)      15.85
+                          Tsubasa: WoRLD CHRoNiCLE 2 (Tsubasa WoRLD CHRoNiCLE #2)      16.28
+                                         Fruits Basket, Vol. 5 (Fruits Basket #5)      16.33
+                                                                 A Murder in Time      16.64
+                                          A Study in Scarlet (Sherlock Holmes #1)      16.73
+                                                                    Camp Midnight      17.08
+                           Y: The Last Man, Vol. 1: Unmanned (Y: The Last Man #1)      18.51
+                                                      Pop Gun War, Volume 1: Gift      18.97
+                                        The Cuckoo's Calling (Cormoran Strike #1)      19.21
+                                                                  This One Summer      19.49
+                                         Fruits Basket, Vol. 7 (Fruits Basket #7)      19.57
+                                                             In a Dark, Dark Wood      19.63
+                          Lumberjanes Vol. 3: A Terrible Plan (Lumberjanes #9-12)      19.92
+
+=== Q5 JOIN - top 10 rated books (rating>=4) with category ===
+SELECT b.title, c.category_name, b.rating, b.price_gbp
+           FROM books b JOIN categories c ON b.category_id = c.category_id
+           WHERE b.rating >= 4
+           ORDER BY b.rating DESC, b.price_gbp DESC, b.title ASC
+           LIMIT 10
+
+                                                                    title  category_name  rating  price_gbp
+                                                                 El Deafo Sequential Art       5      57.62
+            The Sandman, Vol. 3: Dream Country (The Sandman (volumes) #3) Sequential Art       5      55.55
+ The Bachelor Girl's Guide to Murder (Herringford and Watts Mysteries #1)        Mystery       5      52.30
+                  Scott Pilgrim's Precious Little Life (Scott Pilgrim #1) Sequential Art       5      52.29
+                                   A Time of Torment (Charlie Parker #14)        Mystery       5      48.35
+Rat Queens, Vol. 1: Sass & Sorcery (Rat Queens (Collected Editions) #1-5) Sequential Art       5      46.96
+                                 Fruits Basket, Vol. 1 (Fruits Basket #1) Sequential Art       5      40.28
+              Bleach, Vol. 1: Strawberry and the Soul Reapers (Bleach #1) Sequential Art       5      34.65
+                                       1,000 Places to See Before You Die         Travel       5      26.08
+        What Happened on Beale Street (Secrets of the South Mysteries #2)        Mystery       5      25.37
+
